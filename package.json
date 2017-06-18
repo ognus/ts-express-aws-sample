@@ -1,0 +1,36 @@
+{
+  "name": "ts-express-aws-sample",
+  "version": "1.0.0",
+  "description": "Sample express.js API project using AWS CodeDeploy",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ognus/ts-express-aws-sample.git"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "sample",
+    "aws",
+    "codedeploy"
+  ],
+  "author": "Tomasz Kolasa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ognus/ts-express-aws-sample/issues"
+  },
+  "homepage": "https://github.com/ognus/ts-express-aws-sample#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "typescript": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.36"
+  }
+}

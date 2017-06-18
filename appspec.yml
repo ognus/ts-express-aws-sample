@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/ts-express-aws-sample
+hooks:
+  BeforeInstall:
+    - location: install.sh
+  ApplicationStart:
+    - location: run.sh
