@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/ts-express-aws-sample
+    destination: /home/ec2-user/ts-express-aws-sample
 hooks:
   BeforeInstall:
     - location: install.sh
