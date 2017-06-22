@@ -2,9 +2,27 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/ts-express-aws-sample
+    destination: /home/ec2-user/app
+permissions:
+  - object: /home/ec2-user
+    owner: ec2-user
+    group: ec2-user
+    type:
+      - directory
+      - file
 hooks:
   BeforeInstall:
-    - location: install.sh
+    - location: scripts/before-install.sh
+      runas: ec2-user
+  AfterInstall:
+    - location: scripts/after-install.sh
+      runas: ec2-user
   ApplicationStart:
-    - location: run.sh
+    - location: scripts/start.sh
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop.sh
+      runas: ec2-user
+  ValidateService:
+    - location: scripts/validate.sh
+      runas: ec2-user
